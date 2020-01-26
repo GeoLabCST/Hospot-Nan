@@ -82,7 +82,7 @@ export class HomePage {
     await loading.present();
 
     this.service.getAmpHP().then((res: any) => {
-      // console.log(res);
+      console.log(res);
       this.rawHP = res.data.features;
       this.hpCount(this.rawHP);
     });

@@ -9,10 +9,19 @@ export class ServiceService {
   public pro: any = '55';
   public pvCode = 'pv_code=55';
   public centroid = [18.851097, 100.835082];
+  public gps: any;
 
   constructor(
     public http: HttpClient
   ) { }
+
+  pushGps(gps: any) {
+    this.gps = gps
+  }
+
+  getGps() {
+    return this.gps;
+  }
 
   getPvCode() {
     return this.pvCode;
